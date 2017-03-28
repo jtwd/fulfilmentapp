@@ -1,0 +1,77 @@
+.btn-group-wrapper {
+  text-align: center;
+}
+
+.btn-group-wrapper .btn-group {
+  display: inline-block;
+  margin: 10px auto;
+}
+
+.img-responsive {
+  margin: 0 auto;
+}
+
+.panel {
+  margin: 20px 15px;
+}
+.panel-body {
+  padding: 15px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.postalAddress {
+  display: inline-block;
+  text-align: left;
+  width: auto;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.table-details {
+  margin: 20px 0;
+}
+
+.table-details th, .table-details td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+.table-details th {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.table-details.table-order th {
+  padding: 5px;
+}
+
+.table-order tbody tr td {
+  padding: 5px;
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(33,33,33,.85);
+  left: 0;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.section-evidence {
+  padding-bottom: 70px;
+}
+
+.section-order {
+  padding: 0 15px;
+}
+
+.page-footer .container {
+  text-align: left;
+  padding-left: 30px;
+}

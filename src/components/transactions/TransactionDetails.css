@@ -1,0 +1,15 @@
+.table-break {
+    background-color: #bbbbbb;
+}
+
+.table-row-sub-total {
+    background-color: #fcf8e3;
+}
+
+.table-row-grand-total {
+    background-color: #dff0d8;
+}
+
+.table-currency-cell {
+    text-align: right;
+}
