@@ -4,6 +4,7 @@ import {
   SET_TRANSACTIONS,
   SET_FLOW_DETAILS,
   SET_TRANSACTION_DETAILS,
+  SET_EXPORT_DATA
 } from './types';
 
 import { API_URL } from '../index';
@@ -50,5 +51,33 @@ export function fetchTransactionDetails(id) {
     return axios.get(`${API_URL}paypal-transaction/${id}`).then(res => {
       dispatch(setTransactionDetails(res.data.Item));
     })
+  }
+}
+
+export function fetchTransactionsExport(startDate, endDate, modState) {
+  let url = `${API_URL.replace('admin', 'reporting')}/collect-reward/paypal-transactions?`;
+
+  if (startDate) { url += `startDate=${startDate}&` }
+  if (endDate) { url += `endDate=${endDate}&` }
+  if (modState) { url += `moderationState=${modState}` }
+
+  return dispatch => {
+    return axios.get(url).then(res => {
+      dispatch(setExportData(res))
+    })
+  }
+}
+
+export function resetTransactionsExport() {
+  return dispatch => {
+    dispatch(setExportData(false))
+  }
+}
+
+export function setExportData(exportData) {
+  console.log(exportData);
+  return {
+    type: SET_EXPORT_DATA,
+    exportData
   }
 }

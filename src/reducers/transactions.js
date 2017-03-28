@@ -2,13 +2,15 @@ import {
   SET_TRANSACTIONS,
   SET_FLOW_DETAILS,
   SET_TRANSACTION_DETAILS,
+  SET_EXPORT_DATA
 } from '../actions/types';
 
 
 const initialState = {
   list: false,
   details: false,
-  transaction: false
+  transaction: false,
+  exportData: false
 };
 
 export default (state = initialState, action = {}) => {
@@ -26,6 +28,11 @@ export default (state = initialState, action = {}) => {
     case SET_TRANSACTION_DETAILS:
       return Object.assign({}, state, {
         transaction: action.transaction
+      });
+
+    case SET_EXPORT_DATA:
+      return Object.assign({}, state, {
+        exportData: action.exportData.data
       });
 
     default:
